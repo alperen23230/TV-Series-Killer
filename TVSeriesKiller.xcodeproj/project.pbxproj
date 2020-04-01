@@ -3,27 +3,35 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		84D75A6A2434D2F9004E61A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D75A692434D2F9004E61A1 /* AppDelegate.swift */; };
 		84D75A6C2434D2F9004E61A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D75A6B2434D2F9004E61A1 /* SceneDelegate.swift */; };
-		84D75A6E2434D2F9004E61A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D75A6D2434D2F9004E61A1 /* ViewController.swift */; };
 		84D75A712434D2F9004E61A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D75A6F2434D2F9004E61A1 /* Main.storyboard */; };
 		84D75A732434D2FB004E61A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84D75A722434D2FB004E61A1 /* Assets.xcassets */; };
 		84D75A762434D2FB004E61A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84D75A742434D2FB004E61A1 /* LaunchScreen.storyboard */; };
+		84D75A812434D543004E61A1 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D75A802434D543004E61A1 /* SearchTableViewController.swift */; };
+		84D75A842434D836004E61A1 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D75A832434D836004E61A1 /* SearchTableViewCell.swift */; };
+		84D75A862434DFA3004E61A1 /* TVSerie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D75A852434DFA3004E61A1 /* TVSerie.swift */; };
+		84D75A892434E21A004E61A1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 84D75A882434E21A004E61A1 /* SDWebImage */; };
+		84D75A8B2434E21A004E61A1 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 84D75A8A2434E21A004E61A1 /* SDWebImageMapKit */; };
+		84D75A8E2434EC7E004E61A1 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 84D75A8D2434EC7E004E61A1 /* SwiftSoup */; };
+		84D75A912434F576004E61A1 /* SDWebImageWebPCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 84D75A902434F576004E61A1 /* SDWebImageWebPCoder */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84D75A662434D2F9004E61A1 /* TVSeriesKiller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TVSeriesKiller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D75A692434D2F9004E61A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84D75A6B2434D2F9004E61A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84D75A6D2434D2F9004E61A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84D75A702434D2F9004E61A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84D75A722434D2FB004E61A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84D75A752434D2FB004E61A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84D75A772434D2FB004E61A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84D75A802434D543004E61A1 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		84D75A832434D836004E61A1 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		84D75A852434DFA3004E61A1 /* TVSerie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVSerie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +39,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D75A8B2434E21A004E61A1 /* SDWebImageMapKit in Frameworks */,
+				84D75A892434E21A004E61A1 /* SDWebImage in Frameworks */,
+				84D75A912434F576004E61A1 /* SDWebImageWebPCoder in Frameworks */,
+				84D75A8E2434EC7E004E61A1 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,49 @@
 		84D75A682434D2F9004E61A1 /* TVSeriesKiller */ = {
 			isa = PBXGroup;
 			children = (
+				84D75A822434D804004E61A1 /* Custom Table View Cell */,
+				84D75A7F2434D4A7004E61A1 /* Storyboard */,
+				84D75A7E2434D499004E61A1 /* View Controller */,
+				84D75A7D2434D490004E61A1 /* Model */,
 				84D75A692434D2F9004E61A1 /* AppDelegate.swift */,
 				84D75A6B2434D2F9004E61A1 /* SceneDelegate.swift */,
-				84D75A6D2434D2F9004E61A1 /* ViewController.swift */,
-				84D75A6F2434D2F9004E61A1 /* Main.storyboard */,
 				84D75A722434D2FB004E61A1 /* Assets.xcassets */,
-				84D75A742434D2FB004E61A1 /* LaunchScreen.storyboard */,
 				84D75A772434D2FB004E61A1 /* Info.plist */,
 			);
 			path = TVSeriesKiller;
+			sourceTree = "<group>";
+		};
+		84D75A7D2434D490004E61A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84D75A852434DFA3004E61A1 /* TVSerie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84D75A7E2434D499004E61A1 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84D75A802434D543004E61A1 /* SearchTableViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		84D75A7F2434D4A7004E61A1 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				84D75A6F2434D2F9004E61A1 /* Main.storyboard */,
+				84D75A742434D2FB004E61A1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		84D75A822434D804004E61A1 /* Custom Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				84D75A832434D836004E61A1 /* SearchTableViewCell.swift */,
+			);
+			path = "Custom Table View Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +129,12 @@
 			dependencies = (
 			);
 			name = TVSeriesKiller;
+			packageProductDependencies = (
+				84D75A882434E21A004E61A1 /* SDWebImage */,
+				84D75A8A2434E21A004E61A1 /* SDWebImageMapKit */,
+				84D75A8D2434EC7E004E61A1 /* SwiftSoup */,
+				84D75A902434F576004E61A1 /* SDWebImageWebPCoder */,
+			);
 			productName = TVSeriesKiller;
 			productReference = 84D75A662434D2F9004E61A1 /* TVSeriesKiller.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +163,11 @@
 				Base,
 			);
 			mainGroup = 84D75A5D2434D2F9004E61A1;
+			packageReferences = (
+				84D75A872434E21A004E61A1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				84D75A8C2434EC7E004E61A1 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				84D75A8F2434F576004E61A1 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */,
+			);
 			productRefGroup = 84D75A672434D2F9004E61A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84D75A6E2434D2F9004E61A1 /* ViewController.swift in Sources */,
+				84D75A862434DFA3004E61A1 /* TVSerie.swift in Sources */,
 				84D75A6A2434D2F9004E61A1 /* AppDelegate.swift in Sources */,
+				84D75A842434D836004E61A1 /* SearchTableViewCell.swift in Sources */,
+				84D75A812434D543004E61A1 /* SearchTableViewController.swift in Sources */,
 				84D75A6C2434D2F9004E61A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +397,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84D75A872434E21A004E61A1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
+		84D75A8C2434EC7E004E61A1 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+		84D75A8F2434F576004E61A1 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageWebPCoder";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84D75A882434E21A004E61A1 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84D75A872434E21A004E61A1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		84D75A8A2434E21A004E61A1 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84D75A872434E21A004E61A1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+		84D75A8D2434EC7E004E61A1 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84D75A8C2434EC7E004E61A1 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		84D75A902434F576004E61A1 /* SDWebImageWebPCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84D75A8F2434F576004E61A1 /* XCRemoteSwiftPackageReference "SDWebImageWebPCoder" */;
+			productName = SDWebImageWebPCoder;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84D75A5E2434D2F9004E61A1 /* Project object */;
 }

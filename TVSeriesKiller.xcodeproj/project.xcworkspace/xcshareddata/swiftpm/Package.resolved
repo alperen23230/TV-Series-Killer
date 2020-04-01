@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "libwebp",
+        "repositoryURL": "https://github.com/SDWebImage/libwebp-Xcode.git",
+        "state": {
+          "branch": null,
+          "revision": "86c1b5d567ed548da861486b54e1f8f068a3cef7",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage",
+        "state": {
+          "branch": null,
+          "revision": "2dcf1b65994d92ef8806f52dc41aa6fdd677489c",
+          "version": "5.6.1"
+        }
+      },
+      {
+        "package": "SDWebImageWebPCoder",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImageWebPCoder",
+        "state": {
+          "branch": null,
+          "revision": "681023124bac7d71abde26e12fae8e3c006749e2",
+          "version": "0.5.0"
+        }
+      },
+      {
+        "package": "SwiftSoup",
+        "repositoryURL": "https://github.com/scinfu/SwiftSoup",
+        "state": {
+          "branch": null,
+          "revision": "21e2a405e19298ad477fc007094db91b6cac08c3",
+          "version": "2.3.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
