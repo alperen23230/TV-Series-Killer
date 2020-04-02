@@ -12,6 +12,7 @@ import SwiftSoup
 class SearchTableViewController: UITableViewController {
     
     var tvSeries = [TVSerie]()
+    var willSendSerie: TVSerie!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,6 +81,11 @@ extension SearchTableViewController {
         cell.setSerie(tvSerie: currentSerie)
         return cell
     }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentSerie = tvSeries[indexPath.row]
+        willSendSerie = currentSerie
+        performSegue(withIdentifier: "goToSeasons", sender: nil)
+    }
 }
 // MARK: SearchBar Delegate Methods
 extension SearchTableViewController: UISearchBarDelegate {
@@ -90,6 +96,14 @@ extension SearchTableViewController: UISearchBarDelegate {
         fetchTVSeries(name: searchBar.text ?? "")
         
         searchBar.endEditing(true)
+    }
+}
+// MARK: Prepare for Segue
+extension SearchTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? SeasonsTableViewController {
+            destinationVC.currentTVSerie = willSendSerie
+        }
     }
 }
 
