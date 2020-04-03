@@ -14,10 +14,12 @@ class SeasonsTableViewController: UITableViewController {
     var currentTVSerie: TVSerie!
     var seasons = [Season]()
     var indicator = UIActivityIndicatorView()
+    var willSendSeason: Season!
 
     func activityIndicator() {
         indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         indicator.style = UIActivityIndicatorView.Style.large
+        indicator.backgroundColor = .white
         indicator.center = self.view.center
         self.view.addSubview(indicator)
     }
@@ -87,5 +89,18 @@ extension SeasonsTableViewController {
         let cell = UITableViewCell()
         cell.textLabel?.text = "Season \(currentSeason.seasonNumber)"
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentSeason = seasons[indexPath.row]
+        willSendSeason = currentSeason
+        performSegue(withIdentifier: "goToEpisodes", sender: nil)
+    }
+}
+// MARK: Prepare for Segue
+extension SeasonsTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? EpisodesTableViewController {
+            destinationVC.currentSeason = willSendSeason
+        }
     }
 }

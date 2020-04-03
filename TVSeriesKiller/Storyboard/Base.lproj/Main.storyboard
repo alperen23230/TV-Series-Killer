@@ -99,10 +99,42 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Seasons" largeTitleDisplayMode="never" id="tgu-Gq-jbD"/>
+                    <connections>
+                        <segue destination="dcX-f9-u74" kind="show" identifier="goToEpisodes" id="SMl-nK-CiD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gk7-ym-fQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2051" y="112"/>
+        </scene>
+        <!--Episodes-->
+        <scene sceneID="uxY-U8-rFg">
+            <objects>
+                <tableViewController id="dcX-f9-u74" customClass="EpisodesTableViewController" customModule="TVSeriesKiller" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rxn-YR-VLT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="bQQ-b1-EyP">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQQ-b1-EyP" id="qrC-67-Yc7">
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dcX-f9-u74" id="P1H-5D-REa"/>
+                            <outlet property="delegate" destination="dcX-f9-u74" id="psP-BG-9YE"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Episodes" largeTitleDisplayMode="never" id="gUU-Ee-Qjc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mx7-QR-fPR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2897" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qcy-Vg-rjK">
